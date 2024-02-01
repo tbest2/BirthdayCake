@@ -36,6 +36,7 @@ public class CakeView extends SurfaceView {
 
 
 
+
     /**
      * ctor must be overridden here as per standard Java inheritance practice.  We need it
      * anyway to initialize the member variables
@@ -120,7 +121,8 @@ public class CakeView extends SurfaceView {
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
         //Now a candle in the center
-        drawCandle(canvas, cakeLeft + cakeWidth/2 - candleWidth/2, cakeTop);
+        drawCandle(canvas,  (cakeWidth + cakeWidth ) /3 , cakeTop);
+        drawCandle(canvas, cakeLeft * 2 + cakeWidth/4 - candleWidth/4, cakeTop);
 
     }//onDraw
 
