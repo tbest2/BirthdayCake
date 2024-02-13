@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
+
+        CakeView isaac = findViewById(R.id.cakeview);
+        CakeController foo = new CakeController(isaac);
+
     }
 
 
