@@ -3,6 +3,10 @@ package cs301.birthdaycake;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
         CakeView isaac = findViewById(R.id.cakeview);
         CakeController foo = new CakeController(isaac);
+
+
+        Button blow = findViewById(R.id.buttonB);
+        blow.setOnClickListener(foo);
+
+        Switch sCandles = findViewById(R.id.candlesSwitch);
+
 
     }
 

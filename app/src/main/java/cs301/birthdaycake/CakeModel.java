@@ -6,11 +6,24 @@ public class CakeModel {
     public boolean hasFrosting = true;
     public boolean hasCandles = true;
 
-    CakeModel(){
+    CakeModel() {
     }
 
-//CakeModel getModel(){
- //       return this;
-//}
+    void blowing() {
+        isLit = false;
+    }
 
+    boolean getLit() {
+        return isLit;
+    }
+
+    boolean getCandles() {
+        return hasCandles;
+    }
+
+    void fixCandles(boolean boo) {
+        hasCandles = boo;
+    }
 }
+
+
