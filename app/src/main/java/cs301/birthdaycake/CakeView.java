@@ -138,8 +138,24 @@ CakeModel getModel(){
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
         //Now a candle in the center
-        drawCandle(canvas,  (cakeWidth + cakeWidth ) /3 , cakeTop);
-        drawCandle(canvas, cakeLeft * 2 + cakeWidth/4 - candleWidth/4, cakeTop);
+        if (modelObj.numCandles == 1 || modelObj.numCandles == 3 || modelObj.numCandles == 5) {
+            drawCandle(canvas, (cakeWidth + cakeLeft )/ 2 , cakeTop);
+        }
+
+        if (modelObj.numCandles == 2 || modelObj.numCandles == 4 || modelObj.numCandles == 3) {
+            drawCandle(canvas, (cakeWidth + cakeWidth) / 3, cakeTop);
+            drawCandle(canvas, cakeLeft * 2 + cakeWidth / 4 - candleWidth / 4, cakeTop);
+        }
+
+        if (modelObj.numCandles == 4 || modelObj.numCandles == 5) {
+            drawCandle(canvas, (cakeWidth + cakeLeft) / 5, cakeTop);
+            drawCandle(canvas, (2 * cakeWidth) / 2 - cakeLeft, cakeTop);
+        }
+
+        if (modelObj.numCandles == 5) {
+            drawCandle(canvas, (cakeWidth + cakeWidth) / 3 + cakeLeft, cakeTop);
+            drawCandle(canvas, cakeLeft * 2 + cakeWidth / 4 - candleWidth - cakeLeft/ 4, cakeTop);
+        }
 
     }//onDraw
 

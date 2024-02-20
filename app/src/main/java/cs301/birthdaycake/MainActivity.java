@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
         blow.setOnClickListener(foo);
 
         Switch sCandles = findViewById(R.id.candlesSwitch);
+        sCandles.setOnCheckedChangeListener(foo);
 
+        SeekBar candlesNum = findViewById(R.id.candlesSeek);
+        candlesNum.setOnSeekBarChangeListener(foo);
 
     }
 
