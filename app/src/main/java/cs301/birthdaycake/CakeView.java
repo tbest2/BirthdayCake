@@ -157,7 +157,7 @@ CakeModel getModel(){
             drawCandle(canvas, cakeLeft * 2 + cakeWidth / 4 - candleWidth - cakeLeft/ 4, cakeTop);
         }
 
-    }//onDraw
+    }//onDraww
 
     public CakeModel modelGetter(){
         return modelObj;
